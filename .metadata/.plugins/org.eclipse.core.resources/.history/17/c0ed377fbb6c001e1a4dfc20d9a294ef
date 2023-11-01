@@ -1,0 +1,27 @@
+package com.npci.service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.npci.Profile;
+
+public class ProfileServiceImpl implements ProfileService{
+	
+	Set<Profile> profiles = new HashSet<>();
+
+	@Override
+	public int save(Profile p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String delete(Profile p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+
+}

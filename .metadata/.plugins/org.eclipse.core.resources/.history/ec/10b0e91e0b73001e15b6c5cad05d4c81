@@ -1,0 +1,6 @@
+server.port=9092
+spring.application.name=hello
+#location of the config server
+spring.config.import=optional:configserver:http://localhost:8888
+#profiles- environment-picks name-<profiles>.properties
+spring.profiles.active=dev

@@ -1,0 +1,58 @@
+package com.npci.service;
+
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.npci.beans.Employee;
+import com.npci.dao.EmployeeDao;
+import com.npci.exceptions.EmployeeNotFoundException;
+
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	private EmployeeDao dao; //setter method to supply the object
+	
+	
+
+	public void setDao(EmployeeDao dao) {
+		this.dao = dao;
+	}
+
+	@Override
+	@Transactional
+	public void createEmployees(Employee employee1, Employee... employee) {
+			
+	}
+
+	@Override
+	@Transactional
+	public Employee createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee findEmployee(int id) throws EmployeeNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEmployee(int id) throws EmployeeNotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> findEmployeesByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> findEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

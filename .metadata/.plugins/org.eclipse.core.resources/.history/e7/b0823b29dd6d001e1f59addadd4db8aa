@@ -1,0 +1,12 @@
+package com.npci.service;
+
+
+import com.npci.Profile;
+
+public interface ProfileService {
+	
+	Profile saveProfile(Profile p);
+	
+	String deleteProfile(int profile_id);
+
+}

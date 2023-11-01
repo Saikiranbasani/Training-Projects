@@ -1,0 +1,16 @@
+package com.npci.testcases;
+
+import org.junit.jupiter.api.Test;
+
+import com.npci.beans.Calculator;
+
+public class TestCalculator {
+	//testing the add methods
+	@Test
+	public void testAdd()
+	{
+		Calculator c= new Calculator();
+		int result = c.add(20,30)
+		int expected=20+30;
+	}
+}

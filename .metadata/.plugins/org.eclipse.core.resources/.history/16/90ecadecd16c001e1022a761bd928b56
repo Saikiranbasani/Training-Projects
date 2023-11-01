@@ -1,0 +1,11 @@
+package com.npci.service;
+
+
+import com.npci.Profile;
+
+public interface ProfileService {
+	
+	int save(Profile p);
+	String delete(Profile p);
+
+}

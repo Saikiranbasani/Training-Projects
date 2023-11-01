@@ -1,0 +1,19 @@
+package com.npci;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TestSorting {
+	
+	public static void main(String[] args) {
+		
+		Set<String> strings=new TreeSet<>();
+		strings.add("HELLO");
+		strings.add("Hello");
+		strings.add("Hii");
+		strings.add("Test");
+		
+		System.out.println(strings);
+	}
+
+}

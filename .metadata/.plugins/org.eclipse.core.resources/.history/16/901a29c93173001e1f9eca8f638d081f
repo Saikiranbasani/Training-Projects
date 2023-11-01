@@ -1,0 +1,38 @@
+package com.npci.beans;
+
+public class Wallet {
+	
+	private int wallet_id;
+	private double amount;
+	private int account_number_ref;
+	public Wallet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Wallet(int wallet_id, double amount, int account_number_ref) {
+		super();
+		this.wallet_id = wallet_id;
+		this.amount = amount;
+		this.account_number_ref = account_number_ref;
+	}
+	public int getWallet_id() {
+		return wallet_id;
+	}
+	public void setWallet_id(int wallet_id) {
+		this.wallet_id = wallet_id;
+	}
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	public int getAccount_number_ref() {
+		return account_number_ref;
+	}
+	public void setAccount_number_ref(int account_number_ref) {
+		this.account_number_ref = account_number_ref;
+	}
+	
+
+}

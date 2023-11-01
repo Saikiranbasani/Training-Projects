@@ -1,0 +1,23 @@
+package com.npci.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class GretingsImpl implements Greetings{
+	
+	private static Map<String, String> map;
+	
+	public GreetingsImpl() {
+		map=new HashMap<>();
+		
+		
+	}
+
+	@Override
+	public String greet(String name, String language) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

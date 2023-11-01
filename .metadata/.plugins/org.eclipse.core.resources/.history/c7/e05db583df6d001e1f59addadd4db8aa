@@ -1,0 +1,66 @@
+package com.npci.main;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import com.npci.Profile;
+import com.npci.beans.ProfileOperationsFactory;
+import com.npci.service.ProfileService;
+import com.npci.service.ProfileServiceImpl;
+
+public class MainService {
+	
+    public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		ProfileServiceImpl ProfileServiceImpl= new ProfileServiceImpl();
+		ProfileService ProfileService=ProfileOperationsFactory.getInstance();
+		int option=0;
+		do
+		{
+			System.out.println("1:Save Profile\n2:delete Profile\n 3:show All Profiles\nTo Exit Enter-1");
+			option=sc.nextInt();
+			switch(option)
+			{
+			case 1:
+				System.out.println("Enter email_id");
+				String email_id=sc.next();
+				String regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+			      //Matching the given emailid number with regular expression
+			      boolean result = email_id.matches(regex);
+			      if(result) {
+			         System.out.println("Given email-id is valid");
+			      } else {
+			         System.out.println("Given email-id is not valid");
+			      }
+				System.out.println("Enter User Name");
+				String name=sc.next();
+				System.out.println("Enter Your Password");
+				String password=sc.next();
+				System.out.println("Enter Your DOB in yyyy-MM-dd Format Only");
+				LocalDate dob=LocalDate.parse(sc.next());
+				System.out.println("Enter Your Phno");
+				long phno=sc.nextLong();
+				Profile profile=new Profile(email_id,name,password,dob,phno);	
+				ProfileServiceImpl.saveProfile(profile);
+				System.out.println(profile);
+				break;
+
+			case 2:
+				System.out.println("Enter Id to delete the profile");
+				email_id= sc.next();
+				String message=ProfileServiceImpl.deleteProfile(email_id);
+				System.out.println(message);
+				break;
+				
+			case 3 :
+				System.out.println(ProfileServiceImpl.ShowAllProfiles());
+				break;
+			}
+		}
+		while(option!=-1);
+	}
+
+
+
+
+}

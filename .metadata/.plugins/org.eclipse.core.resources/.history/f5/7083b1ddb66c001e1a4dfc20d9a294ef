@@ -1,0 +1,18 @@
+package com.npci.service;
+
+import java.util.Scanner;
+
+import com.npci.Profile;
+
+public class ProfileService {
+	
+	Scanner sc=new Scanner(Sytsem.in);
+	
+	
+	public boolean saveContact(Profile profile) {
+		
+	}
+	
+	
+
+}

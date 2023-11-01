@@ -1,0 +1,17 @@
+package com.npci.testcases;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.npci.beans.Calculator;
+
+public class TestCalculator {
+	//testing the add methods
+	@Test
+	public void testAdd()
+	{
+		Calculator c= new Calculator();
+		int result = c.add(20,30);
+		int expexted = 20+30;
+		assertEquals(expected, result);
+	}
+}
